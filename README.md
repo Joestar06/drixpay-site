@@ -19,6 +19,12 @@
 | `lawyer-statement.html` | Legal statement | 平台声明（沿用旧 URL，原文保留） |
 | `download.html` | Download | 下载 |
 
+## 在线预览与部署
+
+- 仓库：https://github.com/Joestar06/drixpay-site
+- 在线预览（GitHub Pages）：https://joestar06.github.io/drixpay-site/
+- 修改后运行构建，再 `git commit` 并 `git push`，GitHub Pages 约 1 分钟内自动更新
+
 ## 修改方式
 
 **不要直接改根目录或 `zh/` 下的 html**，改 `_src` 后运行：
