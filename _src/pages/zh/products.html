@@ -1,0 +1,114 @@
+<!--meta
+title: 个人服务｜DrixPay 卡、钱包、转账与兑换
+description: DrixPay 个人服务：Visa / Mastercard 加密卡、多币种钱包、免 Gas 转账、实时货币兑换及信用服务。
+active: products
+-->
+<section class="page-hero">
+  <div class="container">
+    <h1>个人服务</h1>
+    <nav class="anchor-nav" aria-label="页面导航">
+      <a href="#card">卡片</a><a href="#wallet">钱包</a><a href="#transfer">转账</a><a href="#exchange">兑换</a><a href="#credit">信用服务</a>
+    </nav>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="prod-row" id="card">
+      <div class="reveal">
+        <h2>DrixPay 卡</h2>
+        <p>使用 DrixPay 余额支付的 Visa / Mastercard 卡。</p>
+        <ul class="ticks">
+          <li>{{i:check}}<span>虚拟卡及实体卡</span></li>
+          <li>{{i:check}}<span>支持线上及线下支付</span></li>
+          <li>{{i:check}}<span>完成 KYC 后在 App 内申请</span></li>
+        </ul>
+      </div>
+      <div class="prod-visual dark reveal">{{card}}</div>
+    </div>
+
+    <div class="prod-row flip" id="wallet">
+      <div class="reveal">
+        <h2>多币种钱包</h2>
+        <p>持有并兑换法币、稳定币及加密资产。</p>
+        <ul class="ticks">
+          <li>{{i:check}}<span>加密货币及法币充值</span></li>
+          <li>{{i:check}}<span>冷热钱包分离</span></li>
+        </ul>
+      </div>
+      <div class="prod-visual reveal">
+        <div class="wallet-ui" aria-hidden="true">
+          <div class="row"><span class="coin" style="background:#26a17b">₮</span><div><b>USDT</b><span>稳定币</span></div><em>8,240.50</em></div>
+          <div class="row"><span class="coin" style="background:#0a0e0b">$</span><div><b>USD</b><span>法币</span></div><em>2,105.00</em></div>
+          <div class="row"><span class="coin" style="background:#f7931a">₿</span><div><b>BTC</b><span>加密资产</span></div><em>0.0213</em></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-row" id="transfer">
+      <div class="reveal">
+        <h2>转账</h2>
+        <p>通过 FUSN 公链结算的链上转账。</p>
+        <ul class="ticks">
+          <li>{{i:check}}<span>免 Gas 费</span></li>
+          <li>{{i:check}}<span>秒级到账</span></li>
+          <li>{{i:check}}<span>链上可追溯</span></li>
+        </ul>
+      </div>
+      <div class="prod-visual dark reveal">
+        <div class="transfer-ui" aria-hidden="true">
+          <div class="lbl">转账金额</div>
+          <div class="amt">1,000.00 <small>USDT</small></div>
+          <div class="line"><span>结算网络</span><b>FUSN</b></div>
+          <div class="line"><span>Gas 费</span><b class="g">无</b></div>
+          <div class="status">{{i:check-circle}}已到账</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-row flip" id="exchange">
+      <div class="reveal">
+        <h2>货币兑换</h2>
+        <p>汇率与全球银行实时同步。</p>
+        <ul class="ticks">
+          <li>{{i:check}}<span>确认前展示完整报价</span></li>
+          <li>{{i:check}}<span>自动匹配最优路径</span></li>
+        </ul>
+      </div>
+      <div class="prod-visual reveal">
+        <div class="fx-ui" aria-hidden="true">
+          <div class="box"><span>支付</span><div><b>1,000.00</b><em>USDT</em></div></div>
+          <div class="swap">{{i:exchange}}</div>
+          <div class="box"><span>获得（示例）</span><div><b>7,780.00</b><em>HKD</em></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="prod-row" id="credit">
+      <div class="reveal">
+        <h2>信用服务</h2>
+        <p>基于链上授信的加密信用卡及借贷服务。</p>
+        <p class="note">{{i:info}}仅在部分地区开放，需通过审核。借贷存在风险。</p>
+      </div>
+      <div class="prod-visual dark reveal">
+        <div class="transfer-ui" aria-hidden="true">
+          <div class="lbl">可用额度（示例）</div>
+          <div class="amt">5,000.00 <small>USD</small></div>
+          <div class="line"><span>状态</span><b class="g">可用</b></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <p class="note" style="justify-content:center;margin:0 0 24px">{{i:info}}费率、限额及支持币种以 App 内展示为准。本页金额均为示例。</p>
+    <div class="cta-band reveal">
+      <h2>开立账户</h2>
+      <div class="btns"><a class="btn btn-primary" href="download.html">{{i:download}}下载 App</a></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,125 @@
+<!--meta
+title: Business | Card Issuing API and White-Label Cards | DrixPay
+description: DrixPay provides white-label virtual and physical cards and a RESTful card issuing API for card issuance, top-up, freezing and transaction webhooks, with an institutional management console.
+active: business
+-->
+<section class="page-hero">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h1>API and white-label cards</h1>
+        <p class="lead">Issue virtual and physical cards under your brand, through our API and management console.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">{{i:mail}}Contact sales</a>
+          <a class="btn btn-ghost" href="https://open.dxpayapp.com/" target="_blank" rel="noopener">{{i:code}}Open Platform</a>
+        </div>
+      </div>
+      <div class="code">
+        <div class="code-bar">
+          <div class="code-tabs" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="biz-curl">cURL</button>
+            <button role="tab" aria-selected="false" aria-controls="biz-hook">Webhook</button>
+          </div>
+        </div>
+<pre class="code-panel" id="biz-curl"><span class="c"># Example only</span>
+curl -X <span class="k">POST</span> <span class="s">"$BASE_URL/v1/cards"</span> \
+  -H <span class="s">"Authorization: Bearer $API_KEY"</span> \
+  -d <span class="s">'{"user_id": "u_7f3a92", "type": "virtual"}'</span></pre>
+<pre class="code-panel" id="biz-hook" hidden><span class="c">// Example only</span>
+{
+  <span class="n">"event"</span>: <span class="s">"card.transaction.created"</span>,
+  <span class="n">"card_id"</span>: <span class="s">"card_9b21e0"</span>,
+  <span class="n">"amount"</span>: <span class="s">"-15.49"</span>,
+  <span class="n">"status"</span>: <span class="s">"approved"</span>
+}</pre>
+      </div>
+    </div>
+
+    <div class="who" style="margin-top:64px">
+      <div>{{i:coins}}<b>Exchanges and wallets</b></div>
+      <div>{{i:store}}<b>Payment platforms</b></div>
+      <div>{{i:rocket}}<b>Web3 projects</b></div>
+      <div>{{i:briefcase}}<b>Corporate expenses</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prod-row" id="whitelabel">
+      <div class="reveal">
+        <h2>White-label cards</h2>
+        <p>Your brand on DrixPay's issuing, settlement and compliance infrastructure.</p>
+        <ul class="ticks">
+          <li>{{i:check}}<span>Virtual and physical cards</span></li>
+          <li>{{i:check}}<span>Institutional management console</span></li>
+          <li>{{i:check}}<span>KYC, KYB, AML and CFT included</span></li>
+        </ul>
+      </div>
+      <div class="prod-visual dark reveal">
+        <div class="card-stack" aria-hidden="true">
+          {{card}}
+          <div class="dcard dcard-wl">
+            <div class="dcard-top"><b class="dcard-brand">YOUR BRAND</b>{{i:nfc}}</div>
+            <div class="dcard-chip"></div>
+            <div class="dcard-num">4000 •••• •••• 1024</div>
+            <div class="dcard-bottom"><span>POWERED BY DRIXPAY</span><div class="dcard-net"><span></span><span></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>API</h2>
+      <p>Full documentation is available on the <a class="link-arrow" href="https://open.dxpayapp.com/" target="_blank" rel="noopener">Open Platform{{i:external}}</a></p>
+    </div>
+    <div class="endpoints reveal">
+      <div class="endpoint"><span class="tile-ico">{{i:key}}</span><div><h3>Authentication</h3><p>API keys and access tokens</p></div></div>
+      <div class="endpoint"><span class="tile-ico">{{i:card}}</span><div><h3>Cards</h3><p>Create, update and freeze cards</p></div></div>
+      <div class="endpoint"><span class="tile-ico">{{i:file}}</span><div><h3>Transactions</h3><p>Deposits, withdrawals and spending</p></div></div>
+      <div class="endpoint"><span class="tile-ico">{{i:bell}}</span><div><h3>Webhooks</h3><p>Real-time event notifications</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><h2>Onboarding</h2></div>
+    <ol class="steps four reveal">
+      <li><b>Inquiry</b><span>Tell us about your business</span></li>
+      <li><b>KYB review</b><span>Business verification</span></li>
+      <li><b>Integration</b><span>API keys and testing</span></li>
+      <li><b>Launch</b><span>Go live</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section soft" id="contact">
+  <div class="container split" style="align-items:start">
+    <div class="section-head reveal">
+      <h2>Contact sales</h2>
+      <p>Your inquiry will be sent by email to support@drixpay.com.</p>
+    </div>
+    <form class="form reveal" data-mailto-form="support@drixpay.com" data-subject="[Business inquiry]">
+      <div class="form-row">
+        <label>Company name<input name="Company" required autocomplete="organization" data-company></label>
+        <label>Email<input name="Email" type="email" required autocomplete="email"></label>
+      </div>
+      <label>Business type
+        <select name="Business type">
+          <option>Exchange / Wallet</option>
+          <option>Payment platform</option>
+          <option>Web3 project</option>
+          <option>Corporate expenses</option>
+          <option>Other</option>
+        </select>
+      </label>
+      <label>Message<textarea name="Message" rows="4"></textarea></label>
+      <button class="btn btn-dark" type="submit">{{i:send}}Send</button>
+    </form>
+  </div>
+</section>

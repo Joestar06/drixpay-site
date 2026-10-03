@@ -1,0 +1,125 @@
+<!--meta
+title: 企业服务｜发卡 API 与白标卡方案｜DrixPay
+description: DrixPay 为企业提供虚拟卡及实体卡白标方案与 RESTful 发卡 API，支持开卡、充值、冻结及交易 Webhook 通知，并配套机构管理后台。
+active: business
+-->
+<section class="page-hero">
+  <div class="container">
+    <div class="split">
+      <div>
+        <h1>API 与白标卡</h1>
+        <p class="lead">通过 API 及管理后台，以自有品牌发行虚拟卡及实体卡。</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#contact">{{i:mail}}商务合作</a>
+          <a class="btn btn-ghost" href="https://open.dxpayapp.com/" target="_blank" rel="noopener">{{i:code}}开放平台</a>
+        </div>
+      </div>
+      <div class="code">
+        <div class="code-bar">
+          <div class="code-tabs" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="biz-curl">cURL</button>
+            <button role="tab" aria-selected="false" aria-controls="biz-hook">Webhook</button>
+          </div>
+        </div>
+<pre class="code-panel" id="biz-curl"><span class="c"># 仅为示例</span>
+curl -X <span class="k">POST</span> <span class="s">"$BASE_URL/v1/cards"</span> \
+  -H <span class="s">"Authorization: Bearer $API_KEY"</span> \
+  -d <span class="s">'{"user_id": "u_7f3a92", "type": "virtual"}'</span></pre>
+<pre class="code-panel" id="biz-hook" hidden><span class="c">// 仅为示例</span>
+{
+  <span class="n">"event"</span>: <span class="s">"card.transaction.created"</span>,
+  <span class="n">"card_id"</span>: <span class="s">"card_9b21e0"</span>,
+  <span class="n">"amount"</span>: <span class="s">"-15.49"</span>,
+  <span class="n">"status"</span>: <span class="s">"approved"</span>
+}</pre>
+      </div>
+    </div>
+
+    <div class="who" style="margin-top:64px">
+      <div>{{i:coins}}<b>交易所及钱包</b></div>
+      <div>{{i:store}}<b>支付平台</b></div>
+      <div>{{i:rocket}}<b>Web3 项目</b></div>
+      <div>{{i:briefcase}}<b>企业费用管理</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="prod-row" id="whitelabel">
+      <div class="reveal">
+        <h2>白标卡</h2>
+        <p>依托 DrixPay 发卡、结算及合规基础设施，以自有品牌发卡。</p>
+        <ul class="ticks">
+          <li>{{i:check}}<span>虚拟卡及实体卡</span></li>
+          <li>{{i:check}}<span>机构管理后台</span></li>
+          <li>{{i:check}}<span>包含 KYC、KYB、AML 及 CFT</span></li>
+        </ul>
+      </div>
+      <div class="prod-visual dark reveal">
+        <div class="card-stack" aria-hidden="true">
+          {{card}}
+          <div class="dcard dcard-wl">
+            <div class="dcard-top"><b class="dcard-brand">YOUR BRAND</b>{{i:nfc}}</div>
+            <div class="dcard-chip"></div>
+            <div class="dcard-num">4000 •••• •••• 1024</div>
+            <div class="dcard-bottom"><span>POWERED BY DRIXPAY</span><div class="dcard-net"><span></span><span></span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section soft">
+  <div class="container">
+    <div class="section-head reveal">
+      <h2>API</h2>
+      <p>完整文档请访问<a class="link-arrow" href="https://open.dxpayapp.com/" target="_blank" rel="noopener">开放平台{{i:external}}</a></p>
+    </div>
+    <div class="endpoints reveal">
+      <div class="endpoint"><span class="tile-ico">{{i:key}}</span><div><h3>身份验证</h3><p>API 密钥及访问令牌</p></div></div>
+      <div class="endpoint"><span class="tile-ico">{{i:card}}</span><div><h3>卡片</h3><p>创建、更新及冻结卡片</p></div></div>
+      <div class="endpoint"><span class="tile-ico">{{i:file}}</span><div><h3>交易</h3><p>存款、取款及消费记录</p></div></div>
+      <div class="endpoint"><span class="tile-ico">{{i:bell}}</span><div><h3>Webhooks</h3><p>实时事件通知</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal"><h2>接入流程</h2></div>
+    <ol class="steps four reveal">
+      <li><b>提交意向</b><span>介绍您的业务</span></li>
+      <li><b>KYB 审核</b><span>企业身份审核</span></li>
+      <li><b>技术对接</b><span>获取密钥并测试</span></li>
+      <li><b>正式上线</b><span>开通生产环境</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section soft" id="contact">
+  <div class="container split" style="align-items:start">
+    <div class="section-head reveal">
+      <h2>商务合作</h2>
+      <p>您的信息将通过邮件发送至 support@drixpay.com。</p>
+    </div>
+    <form class="form reveal" data-mailto-form="support@drixpay.com" data-subject="【企业合作咨询】">
+      <div class="form-row">
+        <label>公司名称<input name="公司名称" required autocomplete="organization" data-company></label>
+        <label>联系邮箱<input name="联系邮箱" type="email" required autocomplete="email"></label>
+      </div>
+      <label>业务类型
+        <select name="业务类型">
+          <option>交易所 / 钱包</option>
+          <option>支付平台</option>
+          <option>Web3 项目</option>
+          <option>企业费用管理</option>
+          <option>其他</option>
+        </select>
+      </label>
+      <label>留言<textarea name="留言" rows="4"></textarea></label>
+      <button class="btn btn-dark" type="submit">{{i:send}}提交</button>
+    </form>
+  </div>
+</section>
